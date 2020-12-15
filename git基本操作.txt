@@ -1,0 +1,46 @@
+gitコマンド
+
+【初期設定で必要なコマンド】
+・ユーザー名の設定
+git config --global user.name 【自分の名前】
+
+・メールアドレスの設定
+git config --global user.email 【自分のメールアドレス】
+
+・利用するエディタとしてVSCodeを設定
+git config --global core.editor "code --wait"
+
+【フォルダをgitで管理するためのコマンド】
+cdで該当フォルダに移動してから実行
+C:\Users\ict\gittest>git init
+※これは該当フォルダが"gittest"の場合の例
+
+【普段の作業で利用するコマンド】
+以下のコマンドは全てcdで該当フォルダに移動してから実行
+
+・ワークからコミットへ
+C:\Users\ict\gittest>git add .
+C:\Users\ict\gittest>git commit
+
+・コミットをワークに戻す
+C:\Users\ict\gittest>
+git checkout .
+
+【リモートリポジトリにプッシュするコマンド】
+・リモートリポジトリの設定（初回のみ実施）
+C:\Users\ict\gittest>git remote add origin https://github.com/ユーザー名/リポジトリ名.gi
+※例えば
+C:\Users\ict\gittest>git remote add origin https://github.com/masamMatsu/test1.git
+
+・コミット済みのプログラムをローカルからリモートにプッシュするコマンド
+C:\Users\ict\gittest>git push -u origin master
+
+・上書き保存をする場合
+C:\Users\ict\gittest>git add .
+　　　↓
+C:\Users\ict\gittest>git commit
+　　　↓
+C:\Users\ict\gittest>git push -u origin master
+の順番でコマンドプロンプトに入力。
+(gittestの部分は上書きしたいプロジェクトの名前)
+ 
